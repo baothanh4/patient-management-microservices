@@ -29,5 +29,9 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+# Ignore environment files
+.env
+.env.*
+
 ### VS Code ###
 .vscode/
