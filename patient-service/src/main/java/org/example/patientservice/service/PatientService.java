@@ -24,7 +24,7 @@ public class PatientService {
         List<Patient> patients = patientRepository.findAll();
         return patients.stream().map(PatientMapper::toDTO).toList();
     }
-
+//baothanh
     public PatientResponseDTO createPatient(PatientRequestDTO patientRequestDTO) {
         if(patientRepository.existsByEmail(patientRequestDTO.getEmail())) {
             throw new EmailAlreadyExistsException("A patient with an email already exists "+ patientRequestDTO.getEmail());
