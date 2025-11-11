@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.example.patientservice.dto.validators.CreatePatientValidationGroup;
 
-@Data
+
 public class PatientRequestDTO {
     @NotBlank(message = "Name is required")
     @Size(max=100,message = "Name cannot exceed 100 characters")
@@ -25,4 +25,44 @@ public class PatientRequestDTO {
 
     @NotBlank(groups = CreatePatientValidationGroup.class,message = "Registered date is required")
     private String registeredDate;
+
+    public String getRegisteredDate() {
+        return registeredDate;
+    }
+
+    public void setRegisteredDate(String registeredDate) {
+        this.registeredDate = registeredDate;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
