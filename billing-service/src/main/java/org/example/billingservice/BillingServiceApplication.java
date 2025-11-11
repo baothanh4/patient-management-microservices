@@ -2,8 +2,10 @@ package org.example.billingservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+@SpringBootApplication(
+        exclude = {DataSourceAutoConfiguration.class}
+)
 public class BillingServiceApplication {
 
     public static void main(String[] args) {
