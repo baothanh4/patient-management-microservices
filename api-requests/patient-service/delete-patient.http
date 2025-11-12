@@ -1,4 +1,4 @@
 ### Delete a patient by Id
-DELETE http://localhost:4000/patients/123e4567-e89b-12d3-a456-426614174000
+DELETE http://localhost:4000/patients/e25de23e-9c13-4a21-b0e0-327bb390f5bd
 
 ###
