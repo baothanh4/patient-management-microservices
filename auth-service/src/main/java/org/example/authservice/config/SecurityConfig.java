@@ -1,4 +1,4 @@
 package org.example.authservice.config;
 
-public class SecurityConfig {
+public class SecurityConfig{
 }
