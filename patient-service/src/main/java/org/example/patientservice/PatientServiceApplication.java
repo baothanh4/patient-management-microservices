@@ -8,9 +8,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PatientServiceApplication {
 
     public static void main(String[] args) {
-        Dotenv dotenv = Dotenv.load();
+        Dotenv dotenv = Dotenv.configure()
+                .directory("./")
+                .ignoreIfMissing()                   // không lỗi nếu không có .env
+                .load();
+
         dotenv.entries().forEach(entry ->
-                System.setProperty(entry.getKey(), entry.getValue())
+                System.out.println("ENV LOAD: " + entry.getKey() + " = " + entry.getValue())
         );
 
         SpringApplication.run(PatientServiceApplication.class, args);
